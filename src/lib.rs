@@ -1,6 +1,8 @@
 use can_config_rs::{errors::ConfigError, config::NetworkRef};
 
 
+const URL : &'static str =  "https://raw.githubusercontent.com/mu-zero-HYPERLOOP/control-panel/main/src-tauri/test.yaml";
+
 
 #[derive(Debug)]
 pub enum LiveConfigError {
@@ -27,7 +29,6 @@ impl From<reqwest::Error> for LiveConfigError {
     }
 }
 
-const URL : &'static str =  "https://raw.githubusercontent.com/mu-zero-HYPERLOOP/can-yaml-config-rs/main/test.yaml";
 
 pub fn fetch_live_config() -> Result<NetworkRef, LiveConfigError> {
     // download from github
