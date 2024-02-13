@@ -1,5 +1,5 @@
 [package]
-name = "can-live-config"
+name = "can-live-config-rs"
 version = "0.1.0"
 edition = "2021"
 
